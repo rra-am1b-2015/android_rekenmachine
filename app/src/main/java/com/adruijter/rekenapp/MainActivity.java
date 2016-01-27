@@ -7,7 +7,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
 {
-
+    // Fields
+    private int number = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -15,11 +16,19 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
     }
 
-    public void updateNumber(View view)
+    public void doMinusOne(View view)
     {
-        int number = 42;
-        TextView txtNumber = (TextView)findViewById(R.id.txtNumber);
-        txtNumber.setText(Integer.toString(number));
-        txtNumber.setTextSize(250);
+        this.number -= 1;
+        TextView txt = (TextView) findViewById(R.id.txtNumber);
+        txt.setText(Integer.toString(this.number));
     }
+
+    public void doPlusOne(View view)
+    {
+        this.number += 1;
+        TextView txt = (TextView) findViewById(R.id.txtNumber);
+        txt.setText(Integer.toString(this.number));
+    }
+
+
 }
