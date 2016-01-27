@@ -25,10 +25,10 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:text="-"
-            android:onClick="doMinusOne"/>
+            android:onClick="doMinusOneLeft"/>
 
         <TextView
-            android:id="@+id/txtNumber"
+            android:id="@+id/txtNumberLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#dddddd"
@@ -42,21 +42,51 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:text="+"
-            android:onClick="doPlusOne"/>
+            android:onClick="doPlusOneLeft"/>
 
         <View
             android:layout_width="10px"
             android:layout_height="match_parent"
             android:background="#616161"
-            android:layout_marginLeft="48dp"
+            android:layout_marginLeft="48dp"/>
+
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-"
+            android:onClick="doMinusOneRight"
+            android:layout_marginLeft="48dp"/>
+
+        <TextView
+            android:id="@+id/txtNumberRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#dddddd"
+            android:text="0"
+            android:textColor="#222222"
+            android:textSize="24sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"/>
+
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"
+            android:onClick="doPlusOneRight"/>
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        android:id="@+id/txtSum"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="updateNumber"
+        android:onClick="sum"
         android:text="Bereken"
         android:textSize="24sp" />
 
